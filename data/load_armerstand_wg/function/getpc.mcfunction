@@ -1,0 +1,1 @@
+give @p armor_stand[entity_data={id:"minecraft:armor_stand",NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,Tags:["pc"],DisabledSlots:4144959},item_name='"PC"',item_model="minecraft:command_block",enchantment_glint_override=true,lore=['"設置すると様々なアイテムを買える"']] 1

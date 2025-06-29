@@ -1,0 +1,9 @@
+#もしpcというタグが付いていてsetが付いていない防具立てがあったら
+#pcの座標にブロックディスプレイを設置するためのfunctionを起動する
+execute as @e[type=minecraft:armor_stand,tag=pc,tag=!set] at @s run function load_armerstand_wg:summonpc
+#効果音を鳴らす
+execute as @e[type=minecraft:armor_stand,tag=pc,tag=!set] at @s run playsound minecraft:block.beacon.activate ambient @p ~ ~ ~ 1 2
+#村人を出す
+execute as @e[type=minecraft:armor_stand,tag=pc,tag=!set] at @s run summon villager ~ ~ ~ {NoGravity:1b,Silent:1b,NoAI:1b,Health:1f,Tags:["pc"],CustomName:'"PC"',active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],VillagerData:{level:99},Offers:{Recipes:[{rewardExp:0b,maxUses:2147483647,buy:{id:"minecraft:emerald",count:30},sell:{id:"minecraft:armor_stand",count:1,components:{"minecraft:entity_data":{id:"minecraft:armor_stand",NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["a"],DisabledSlots:4144959},"minecraft:item_name":'{"color":"white","italic":false,"text":"チャンクローダー"}',"minecraft:lore":["{\"color\":\"white\",\"italic\":false,\"text\":\"設置時に3×3のチャンクを常時読み込みにします\"}"],"minecraft:item_model":"minecraft:lodestone","minecraft:enchantment_glint_override":true}}},{rewardExp:0b,maxUses:2147483647,buy:{id:"minecraft:emerald",count:10},sell:{id:"minecraft:enchanted_book",count:1,components:{"minecraft:item_model":"minecraft:ender_eye","minecraft:lore":['{"color":"white","italic":false,"text":"右クリックすると"}','{"color":"white","italic":false,"text":"今いるチャンクが常時読み込みかどうかを確認できる"}'],"minecraft:item_name":'{"color":"white","text":"ロードチェッカー"}',"minecraft:consumable":{consume_seconds:1000,animation:"block",has_consume_particles:false}}}},{rewardExp:0b,maxUses:2147483647,buy:{id:"minecraft:emerald",count:7},sell:{id:"minecraft:map",count:1,components:{"minecraft:lore":["{\"color\":\"white\",\"italic\":false,\"text\":\"ローダーの設定時に役に立つ\"}"]}}}]}}
+#setを付ける
+execute as @e[type=minecraft:armor_stand,tag=pc,tag=!set] at @s run tag @s add set

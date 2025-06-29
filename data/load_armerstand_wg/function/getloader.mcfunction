@@ -1,0 +1,1 @@
+give @p armor_stand[entity_data={id:"minecraft:armor_stand",NoGravity:1b,Invulnerable:1b,Invisible:1b,Tags:["a"],DisabledSlots:4144959},item_name='{"color":"white","italic":false,"text":"チャンクローダー"}',lore=['{"color":"white","italic":false,"text":"設置時に3×3のチャンクを常時読み込みにします"}'],item_model="minecraft:lodestone",enchantment_glint_override=true] 1
