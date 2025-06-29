@@ -10,6 +10,7 @@
 3.その他わからないことがあったらDiscordに連絡してください
 discordid: wagglyzebra9743
 
+配布リンク
 github
 https://github.com/WagglyZebra9743/chank_loader_datapack
 
